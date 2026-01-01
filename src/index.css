@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------
+   Reckless Font Face
+   ------------------------- */
+@font-face {
+  font-family: 'Reckless';
+  src: url('./fonts/Reckless-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -------------------------
+   Untitled Sans Font Faces
+   ------------------------- */
+
+/* Light */
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-light-italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-regular-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-medium-italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-bold-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black */
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('./fonts/untitled-sans-black-italic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
