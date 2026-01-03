@@ -3,36 +3,45 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
-// import GuideSection from './components/GuideSection';
-import ServicesSection from './components/ServicesSection';
+import GuideSection from './components/GuideSection';
+import ServicesSectionOne from './components/ServicesSectionOne';
+import ServicesSectionTwo from './components/ServicesSectionTwo';
+import PatientRatingSection from './components/PatientRatingSection';
 // import InsuranceSection from './components/InsuranceSection';
-import MembershipSection from './components/MembershipSection';
+// import MembershipSection from './components/MembershipSection';
 // import FormGuideSectionDesktop from './components/FormGuideSectionDesktop';
 import WaitingListSection from './components/WaitingListSection';
-import ComparisonSection from './components/ComparisonSection';
-import OffersScection from './components/OffersSection';
+// import ComparisonSection from './components/ComparisonSection';
+// import OffersScection from './components/OffersSection';
 import LocationSection from './components/LocationsSection';
 // import HerselfHealthLogoSection from './components/HerselfHealthLogoSection';
-import MembershipDetailsSection from './components/MembershipDetailsSection';
-import OurCareSection from './components/OurCareSection';
-import NextStepSection from './components/NextStepSection';
-import FaqSection from './components/FaqSection';
-import Testimonials from './components/Testimonials';
+// import MembershipDetailsSection from './components/MembershipDetailsSection';
+// import OurCareSection from './components/OurCareSection';
+// import NextStepSection from './components/NextStepSection';
+// import FaqSection from './components/FaqSection';
+// import Testimonials from './components/Testimonials';
+import InPracticeSection from './components/InPracticeSection';
+import AnnouncementsSection from './components/AnnouncementsSection';
 
 function App() {
   // define the order of sections for easy management
   const sections = [
     HeroSection, // hero section with primary call-to-action
-    ServicesSection, // services offered by the company
-    MembershipSection, // membership or subscription information
-    ComparisonSection, // comparison of services
-    OffersScection, // offers promotions
+    ServicesSectionOne, // services offered by the company
+    ServicesSectionTwo, // services offered by the company
+    PatientRatingSection, // patient ratings
+    GuideSection, // guide download section
+    InPracticeSection,
+    AnnouncementsSection,
+    // MembershipSection, // membership or subscription information
+    // ComparisonSection, // comparison of services
+    // OffersScection, // offers promotions
     WaitingListSection, // waiting list or sign-up form
-    MembershipDetailsSection,
-    OurCareSection,
-    Testimonials,
-    NextStepSection,
-    FaqSection,
+    // MembershipDetailsSection,
+    // OurCareSection,
+    // Testimonials,
+    // NextStepSection,
+    // FaqSection,
     Footer,
     LocationSection,
     // GuideSection, // guide download section
@@ -47,7 +56,7 @@ function App() {
       <Header />
 
       {/* main content area, semantically marked as main */}
-      <main className="max-w-[1728px] mx-auto" role="main">
+      <main className="mx-auto max-w-[1728px]" role="main">
         {sections.map((Section, index) => (
           // render each section in order
           <Section key={index} />

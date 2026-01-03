@@ -156,7 +156,7 @@ export default function WaitingListForm() {
 
         // reset form and hide success message after 5 seconds
         timerRef.current = setTimeout(() => {
-          // setSubmitted(false);
+          setSubmitted(false);
           setFormData({ FirstName: '', LastName: '', Email: '', Phone: '' });
         }, 5000);
       } else {
@@ -181,13 +181,9 @@ export default function WaitingListForm() {
     <div className="relative flex items-center justify-center md:justify-start">
       {/* success message overlay */}
       <div
-        className={`absolute transition-opacity duration-700 ease-in-out font-reckless text-[24px]
-                    text-darkPink text-lg font-medium mb-3 xl:leading-tight
-                    ${
-                      submitted
-                        ? 'opacity-100 pointer-events-auto'
-                        : 'opacity-0 pointer-events-none'
-                    }`}
+        className={`absolute mb-3 font-reckless text-[24px] text-lg font-medium text-darkPink transition-opacity duration-700 ease-in-out xl:leading-tight ${
+          submitted ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
+        }`}
       >
         <p className="pb-2 text-2xl text-center lg:text-left">Thank you!</p>
         <p className="pb-5 text-2xl text-center lg:text-left">Your form has been submitted</p>
@@ -211,7 +207,7 @@ export default function WaitingListForm() {
 
       {/* error message */}
       {error && (
-        <div className="absolute top-0 left-0 right-0 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+        <div className="absolute top-0 left-0 right-0 px-4 py-3 mb-4 text-red-700 bg-red-100 border border-red-400 rounded">
           {error}
         </div>
       )}
@@ -220,15 +216,15 @@ export default function WaitingListForm() {
       <form
         onSubmit={handleSubmit}
         className={`w-full transition-opacity duration-700 ease-in-out ${
-          submitted ? 'opacity-0 pointer-events-none' : 'opacity-100'
-        } grid md:gap-x-[48px] md:grid-cols-2`}
+          submitted ? 'pointer-events-none opacity-0' : 'opacity-100'
+        } grid md:grid-cols-2 md:gap-x-[48px]`}
       >
         {fields.map(({ id, label, type, placeholder, autoComplete }) => (
           <div key={id}>
             {/* input label */}
             <label
               htmlFor={id}
-              className="font-untitled font-normal text-[18px] text-[#1D2534] block mb-1"
+              className="mb-1 block font-untitled text-[18px] font-normal text-[#1D2534]"
             >
               {label}
             </label>
@@ -240,7 +236,7 @@ export default function WaitingListForm() {
               type={type}
               placeholder={placeholder}
               autoComplete={autoComplete}
-              className="border border-darkPink px-[10px] py-[8px] rounded-[5px] mb-4 w-full font-untitled font-normal text-[18px] placeholder:text-pink"
+              className="mb-4 w-full rounded-[5px] border border-darkPink px-[10px] py-[8px] font-untitled text-[18px] font-normal placeholder:text-pink"
               value={formData[id]}
               onChange={handleChange}
               required
@@ -252,9 +248,9 @@ export default function WaitingListForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className={`p-[10px] rounded-[10px] w-full mt-2 mb-2 md:col-span-2 text-[22px] transition-colors ${
+          className={`mb-2 mt-2 w-full rounded-[10px] p-[10px] text-[22px] transition-colors md:col-span-2 ${
             isLoading
-              ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
+              ? 'cursor-not-allowed bg-gray-400 text-gray-600'
               : 'bg-purple text-white hover:bg-purple/90'
           }`}
         >

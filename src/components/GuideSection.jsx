@@ -1,35 +1,66 @@
 export default function GuideSection() {
   return (
-    <section className="bg-tan py-0 pb-12 px-6 md:px-24 md:flex md:flex-col md:py-[100px]">
-      <p className="font-untitled text-[#1D2534] text-[18px] mb-6 md:font-reckless md:text-[40px] md:mb-8 md:leading-[50px] md:text-pink lg:text-[45px] md:text-center">
-        We’ll send your guide and help you take the next step toward your first visit.
-      </p>
-      <div className="block md:flex gap-4 md:gap-16">
-        <div>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/guide-cover.webp`}
-            alt="lady smiling"
-            className="w-full h-auto rounded-lg"
+    // main container with background color
+    <div className="relative bg-[#9A0180]">
+      {/* hero image container */}
+      <div className="relative max-h-[828px] w-full">
+        <picture>
+          {/* desktop image source with media query */}
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/images/guide-bg-image-desktop.webp`}
+            media="(min-width: 768px)"
           />
-        </div>
-        <div className="flex flex-col justify-center md:max-w-md lg:max-w-lg">
-          <p className="font-untitled text-[#1D2534] text-[18px] md:text-[24px]">
-            Get your free Guide To Feeling Your Best and learn what to expect at Herself Health –
-            from your first visit to the care designed around your life.
+          {/* mobile image (default) */}
+          <img
+            src={`${process.env.PUBLIC_URL}/images/guide-bg-image-mobile.webp`}
+            alt="A woman in workout clothes smiling, with a water bottle in hand."
+            className="block w-full object-cover md:min-h-[525px]"
+          />
+        </picture>
+      </div>
+
+      {/* overlay text and button section */}
+      <div className="relative z-10 px-[30px] py-[35px] pb-[48px] md:absolute md:inset-0 md:flex md:items-center md:justify-start md:p-12 lg:px-[100px]">
+        <div className="flex flex-col gap-4 md:w-[57%] md:min-w-[700px] md:rounded-lg md:bg-[#9A0180] md:px-14 md:py-10">
+          {/* main headline */}
+          <h2 className="title-font !text-white">Care built for this stage of life</h2>
+
+          {/* main descriptive paragraphs */}
+          <p className="body-font !text-white md:hidden lg:!text-[21px] xl:block">
+            Hormones, sleep, heart health, bone health, weight, mood, and energy often change
+            together during midlife. Addressing them well means looking at the full picture, not
+            treating symptoms in isolation.
           </p>
-          {/* call-to-action button */}
-          <button
-            className="mt-16 hidden md:block w-full md:w-[385px] h-auto bg-purple text-white font-untitled text-[22px] 
-                       py-3 px-4 rounded-lg shadow-lg hover:bg-purple-dark transition-colors duration-300"
-            onClick={() => {
-              // scroll to waiting list section smoothly when button is clicked
-              document.getElementById('call-now')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            Get My Free Guide & Next Steps
-          </button>
+
+          <p className="body-font !text-white md:hidden lg:!text-[21px] 2xl:block">
+            Herself Health focuses exclusively on women in midlife, with providers who understand
+            how these changes connect and how to guide you through them.
+          </p>
+
+          <div className="md:mt-7 md:flex md:flex-row-reverse">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/brochure-cover.webp`}
+              alt="Brouchure cover titled 'The Herself Health Guide to Midlife Care'."
+              className="-mt-6 h-auto w-[179px] lg:w-[290px]"
+            />
+
+            <div>
+              <h3 className="subtitle-font !text-white">
+                Your free guide designed for women 50-64
+              </h3>
+
+              {/* call-to-action button */}
+              <a
+                className="button-font mt-4 flex h-[67px] w-full items-center justify-center rounded-lg bg-white text-center !text-[#9A0180] shadow-lg transition-colors duration-300 hover:bg-gray-200 lg:max-w-[330px]"
+                href="/files/herself-health-guide.pdf"
+                download
+              >
+                Download your free guide
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

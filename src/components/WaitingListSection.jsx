@@ -19,7 +19,7 @@ export default function WaitingListSection() {
             <img
               src={`${process.env.PUBLIC_URL}/images/waitlist-mobile.webp`}
               alt="A woman wearing glasses stands in front of a closed door, looking directly at the camera"
-              className="block w-full md:min-h-[694px] object-cover md:h-[877px]"
+              className="block w-full object-cover md:h-[787px] md:min-h-[694px]"
             />
           </picture>
         </div>
@@ -27,46 +27,49 @@ export default function WaitingListSection() {
         {/* Overlay container for testimonial + form */}
         <div
           id="waiting-list"
-          className="w-full py-[34px] px-[30px] 
-                     md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 
-                     lg:px-0 md:px-[30px] md:py-0 md:max-w-[822px] lg:left-[146px]"
+          className="w-full px-[30px] py-[34px] md:absolute md:left-0 md:top-1/2 md:max-w-[822px] md:-translate-y-1/2 md:px-[30px] md:py-0 lg:left-[146px] lg:px-0"
         >
           {/* Testimonial block */}
-          <div className="mb-[35px] lg:mb-[40px] md:text-center" id="call-now">
+          <div className="mb-[35px] md:text-center lg:mb-[40px]" id="call-now">
+            {/* Mobile (pink) */}
             <img
-              src={`${process.env.PUBLIC_URL}/images/quotations-icon.png`}
+              src={`${process.env.PUBLIC_URL}/images/quotations-icon-pink.png`}
               alt="Quotation mark icon"
-              className="block w-[50px] h-full mb-[15px] md:mx-auto"
+              className="mb-[15px] block h-full w-[50px] md:hidden"
             />
-            <blockquote className="font-untitled font-bold italic text-[18px] md:text-[20px] text-pink leading-6 mb-[16px]">
+
+            {/* md and up (white) */}
+            <img
+              src={`${process.env.PUBLIC_URL}/images/quotations-icon-white.png`}
+              alt="Quotation mark icon"
+              className="mb-[15px] hidden h-full w-[50px] md:mx-auto md:block"
+            />
+            <blockquote className="mb-[16px] font-untitled text-[18px] font-medium italic leading-6 text-pink md:px-16 md:text-[20px] md:text-white">
               I felt very valued and well cared for. It was a very good first appointment with the
               very thoughtful doctor.
             </blockquote>
-            <p className="font-untitled font-normal text-[18px] text-[#1D2534] leading-6 mb-[16px] md:text-[20px]">
+            <p className="mb-[16px] font-untitled text-[18px] font-normal leading-6 text-[#1D2534] md:hidden md:text-[20px]">
               – Jayne H.
             </p>
           </div>
 
           {/* Headline */}
-          <h2 className="font-reckless font-medium text-[40px] text-pink mb-[35px] md:hidden leading-[45px]">
+          <h2 className="mb-[35px] font-reckless text-[40px] font-medium leading-[45px] text-pink md:hidden">
             Schedule Your Appointment
           </h2>
           {/* Description */}
-          <p className="font-untitled font-normal text-[18px] text-[#1D2534] leading-6 mb-[25px] md:hidden">
+          <p className="mb-[25px] font-untitled text-[18px] font-normal leading-6 text-[#1D2534] md:hidden">
             Fill out the form below and someone from our team will get back to you in 24 hours. 
           </p>
 
           {/* Form box */}
-          <div className="md:border-[2px] bg-white border-pink rounded-[10px] md:px-[83px] md:py-[61px]">
+          <div className="rounded-[10px] border-pink bg-white md:border-[2px] md:px-[83px] md:py-[61px]">
             {/* Headline */}
-            <h2
-              className="hidden font-reckless font-medium text-pink mb-[35px] 
-                          md:block text-[50px] leading-[45px]"
-            >
+            <h2 className="mb-[35px] hidden font-reckless text-[50px] font-medium leading-[45px] text-pink md:block">
               Schedule Your Appointment
             </h2>
             {/* Description */}
-            <p className="hidden md:block font-untitled font-normal text-[18px] text-[#1D2534] leading-6 mb-[25px] lg:text-[20px]">
+            <p className="mb-[25px] hidden font-untitled text-[18px] font-normal leading-6 text-[#1D2534] md:block lg:text-[20px]">
               Fill out the form below and someone from our team will get back to you in 24 hours. 
             </p>
             {/* Embedded form */}
