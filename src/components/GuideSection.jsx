@@ -52,8 +52,9 @@ export default function GuideSection() {
               {/* call-to-action button */}
               <a
                 className="button-font mt-4 flex h-[67px] w-full items-center justify-center rounded-lg bg-white text-center !text-[#9A0180] shadow-lg transition-colors duration-300 hover:bg-gray-200 lg:max-w-[330px]"
-                href="/files/herself-health-guide.pdf"
-                download
+                href={`${process.env.PUBLIC_URL}/files/herself-health-guide.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Download your free guide
               </a>
