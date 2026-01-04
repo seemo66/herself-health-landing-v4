@@ -26,13 +26,13 @@ export default function GuideSection() {
           <h2 className="title-font !text-white">Care built for this stage of life</h2>
 
           {/* main descriptive paragraphs */}
-          <p className="body-font !text-white md:hidden lg:!text-[21px] xl:block">
+          <p className="body-font !text-white md:hidden lg:block lg:!text-[21px]">
             Hormones, sleep, heart health, bone health, weight, mood, and energy often change
             together during midlife. Addressing them well means looking at the full picture, not
             treating symptoms in isolation.
           </p>
 
-          <p className="body-font !text-white md:hidden lg:!text-[21px] 2xl:block">
+          <p className="body-font !text-white md:hidden lg:!text-[21px] xl:block">
             Herself Health focuses exclusively on women in midlife, with providers who understand
             how these changes connect and how to guide you through them.
           </p>

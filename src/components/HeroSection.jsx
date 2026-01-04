@@ -24,7 +24,7 @@ export default function HeroSection() {
 
       {/* overlay text and button section */}
       <div className="relative z-10 px-[30px] py-[35px] pb-[48px] md:absolute md:inset-0 md:flex md:items-center md:justify-start md:p-12 lg:px-[100px]">
-        <div className="flex flex-col gap-4 md:w-[75%] lg:w-[55%] xl:w-[50%] 2xl:w-[48%]">
+        <div className="flex flex-col gap-4 md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[48%]">
           {/* main headline */}
           <h1 className="title-font">Primary Care Designed for Women 50–64</h1>
 
@@ -34,7 +34,7 @@ export default function HeroSection() {
           </h2>
 
           {/* main descriptive paragraphs */}
-          <p className="body-font md:hidden xl:block">
+          <p className="body-font">
             Midlife health gets complicated. Getting care should not. Herself Health is primary care
             designed for this stage of life, so you can spend more time with your provider, get help
             when something feels off, and leave with a plan that actually makes sense.
