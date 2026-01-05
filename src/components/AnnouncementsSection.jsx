@@ -73,6 +73,10 @@ export default function AnnouncementsSection() {
             <button
               className="button-font m-auto h-[67px] w-full rounded-lg lg:max-w-[284px]"
               style={{ backgroundColor: section.button.bg, color: section.button.textColor }}
+              onClick={() => {
+                // scroll to waiting list section smoothly when button is clicked
+                document.getElementById('waiting-list')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               {section.button.text}
             </button>

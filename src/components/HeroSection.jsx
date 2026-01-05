@@ -44,8 +44,8 @@ export default function HeroSection() {
           <button
             className="button-font mt-4 h-[67px] w-full rounded-lg bg-purple shadow-lg transition-colors duration-300 hover:bg-purple-dark md:w-[355px]"
             onClick={() => {
-              // scroll to waiting list section smoothly when button is clicked
-              document.getElementById('call-now')?.scrollIntoView({ behavior: 'smooth' });
+              // scroll to guide section smoothly when button is clicked
+              document.getElementById('guide')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
             See if this care fits your life
