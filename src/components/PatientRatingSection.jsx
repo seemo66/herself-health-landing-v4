@@ -15,8 +15,8 @@ export default function PatientRatingSection() {
         ))}
       </div>
       <div id="guide">
-        <p className="subtitle-font !font-bold">4.9 average patient rating</p>
-        <p className="subtitle-font">Trusted by more than 10,000 patients</p>
+        <p className="subtitle-font !font-bold">4.9 stars from 500+ patient reviews</p>
+        <p className="subtitle-font">Caring for more than 10,000 patients</p>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ export default function AnnouncementsSection() {
         color: '#9A0180',
       },
       subtitle: {
-        before: 'Questions before joining',
+        before: 'Questions before joining?',
         phone: '888-290-1209',
         after: 'to talk with our team',
         color: '#9A0180',
@@ -24,11 +24,11 @@ export default function AnnouncementsSection() {
     {
       bgColor: '#9A0180',
       title: {
-        text: 'See If Herself Health Is Right for You',
+        text: 'See what this membership includes',
         color: '#FFFFFF',
       },
       subtitle: {
-        text: 'No obligation. Just a chance to see if this care fits your needs.',
+        text: 'No obligation. Just clear details so you can decide if this care is right for you',
         color: '#FFFFFF',
       },
       button: {

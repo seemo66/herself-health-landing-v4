@@ -22,13 +22,13 @@ export default function InPracticeSection() {
         <h2 className="title-font mb-4 lg:mb-[30px]">What this care looks like in practice</h2>
 
         {/* Service highlights with checkmarks */}
-        <ul className="pl-0 space-y-4 list-font">
+        <ul className="list-font space-y-4 pl-0">
           {[
-            'Primary care designed specifically for women in midlife',
+            'Primary care designed around midlife health needs',
             'Providers trained in women’s and midlife health',
-            'Longer visits that allow real conversation and planning',
-            'Care that addresses physical and emotional health together',
-            'Guidance tailored to your goals and long-term well-being',
+            'Longer visits that allow time to be heard and understood',
+            'Care that considers physical and emotional health together',
+            'Guidance tailored to your personal goals and long-term well-being',
           ].map((item, idx) => (
             <li key={idx} className="flex items-center space-x-4">
               <img

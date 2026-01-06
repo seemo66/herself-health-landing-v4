@@ -19,14 +19,16 @@ export default function ServicesSectionOne() {
 
       {/* Text content */}
       <div className="lg:w-1/2 xl:max-w-[605px]">
-        <h2 className="title-font mb-4 lg:mb-[30px]">More time with your provider</h2>
+        <h2 className="title-font mb-4 lg:mb-[30px]">Finally, care that feels easier</h2>
 
         {/* Service highlights with checkmarks */}
         <ul className="list-font mb-[25px] space-y-4 pl-0">
           {[
-            'Easier access when questions come up',
-            'Appointments that fit real work and life schedules',
-            'A clear, personalized plan for midlife health',
+            'More time with your provider, without feeling rushed',
+            'Appointment availability designed around your schedule',
+            'Easier access when something feels off or unclear',
+            'Care that fits real lives, with less friction and fewer handoffs',
+            'A clear, connected plan for midlife health',
           ].map((item, idx) => (
             <li key={idx} className="flex items-center space-x-4">
               <img

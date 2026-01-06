@@ -24,9 +24,10 @@ export default function ServicesSectionTwo() {
         </h2>
 
         <p className="body-font">
-          That membership gives you longer visits, easier access to your care team, and a personal
-          plan for midlife health without feeling rushed. Appointments are designed for real
-          conversations and follow-up, not quick checklists.
+          Our membership allows for longer visits, more responsive access to your care team, and a
+          personalized plan that looks at your health as a whole. Instead of quick checklists,
+          appointments are designed for real conversations, follow-up, and continuity. Membership
+          plans start as low as $99 per month, depending on coverage and care needs.
         </p>
       </div>
     </section>
