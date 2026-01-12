@@ -3,7 +3,7 @@ export default function GuideSection() {
     // main container with background color
     <div className="relative bg-[#9A0180]">
       {/* hero image container */}
-      <div className="relative max-h-[828px] w-full">
+      <div className="relative max-h-[964px] w-full">
         <picture>
           {/* desktop image source with media query */}
           <source
@@ -21,44 +21,50 @@ export default function GuideSection() {
 
       {/* overlay text and button section */}
       <div className="relative z-10 px-[30px] py-[35px] pb-[48px] md:absolute md:inset-0 md:flex md:items-center md:justify-start md:p-12 lg:px-[100px]">
-        <div className="flex flex-col gap-4 md:w-[57%] md:min-w-[700px] md:rounded-lg md:bg-[#9A0180] md:px-14 md:py-10">
+        <div className="flex flex-col gap-4 md:w-[57%] md:min-w-[700px] md:gap-0 md:rounded-lg md:bg-[#9A0180] md:px-14 md:py-10">
           {/* main headline */}
-          <h2 className="title-font !text-white">Care designed for this stage of life e</h2>
-
+          <h2 className="title-font !text-white md:mb-8">
+            The Comprehensive Women's Health Roadmap.
+          </h2>
           {/* main descriptive paragraphs */}
-          <p className="body-font !text-white md:hidden lg:block lg:!text-[21px]">
-            During midlife, changes in hormones, sleep, heart health, bone health, weight, mood, and
-            energy often happen together. Addressing them well means looking at patterns, not
-            isolated symptoms.
+          <p className="body-font !text-white md:mb-8 md:hidden lg:block lg:!text-[21px]">
+            We have created a guide to help you advocate for the care you need.
           </p>
 
-          <p className="body-font !text-white md:hidden lg:!text-[21px] xl:block">
-            Herself Health focuses on women navigating this stage, with providers who understand how
-            these changes connect and how to guide you through them with clarity and context.
+          <p className="body-font !text-white md:mb-8 md:hidden lg:!text-[21px] xl:block">
+            Inside, you will discover:
           </p>
 
-          <div className="md:mt-7 md:flex md:flex-row-reverse">
+          <ul className="body-font list- ml-8 list-disc !text-white md:hidden lg:!text-[21px] xl:block">
+            <li className="mb-3">
+              The "Invisible" Gaps: Why standard screenings often miss early signs of heart disease
+              and bone loss.
+            </li>
+            <li className="mb-3">
+              The Rational Choice: The data behind why longer visits and advanced diagnostics (like
+              DEXA scans) are critical right now.
+            </li>
+            <li>
+              The Checklist: 3 questions to ask your current provider to see if you are protected.
+            </li>
+          </ul>
+
+          <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-end md:gap-4 xl:gap-10">
             <img
               src={`${process.env.PUBLIC_URL}/images/brochure-cover.webp`}
-              alt="Brouchure cover titled 'The Herself Health Guide to Midlife Care'."
-              className="-mt-6 h-auto w-[179px] lg:w-[290px]"
+              alt="Brochure cover titled 'The Herself Health Guide to Midlife Care'."
+              className="-mt-6 h-auto w-[227px] md:mt-0 lg:w-[320px]"
             />
 
-            <div>
-              <h3 className="subtitle-font !text-white">
-                Your free guide designed for women 50-64
-              </h3>
-
-              {/* call-to-action button */}
-              <a
-                className="button-font mt-4 flex h-[67px] w-full items-center justify-center rounded-lg bg-white text-center !text-[#9A0180] shadow-lg transition-colors duration-300 hover:bg-gray-200 lg:max-w-[330px]"
-                href={`${process.env.PUBLIC_URL}/files/herself-health-guide.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download your free guide
-              </a>
-            </div>
+            {/* call-to-action button */}
+            <a
+              className="button-font flex h-[67px] w-full items-center justify-center rounded-lg bg-white px-4 text-center !text-[#9A0180] shadow-lg transition-colors duration-300 hover:bg-gray-200 lg:max-w-[330px]"
+              href={`${process.env.PUBLIC_URL}/files/herself-health-guide.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download your guide
+            </a>
           </div>
         </div>
       </div>

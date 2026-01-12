@@ -3,7 +3,7 @@
 
 export default function ServicesSectionTwo() {
   return (
-    <section className="m-auto flex flex-col gap-[40px] bg-white px-[30px] py-[37px] lg:flex-row lg:items-center lg:justify-center lg:gap-[54px] lg:py-[90px] lg:pt-12 xl:px-[155px]">
+    <section className="m-auto flex flex-col gap-[40px] bg-white px-[30px] py-[37px] lg:flex-row lg:items-center lg:justify-center lg:py-[90px] lg:pt-12 xl:px-[155px]">
       {/* Responsive service image */}
       <picture className="block lg:aspect-auto lg:max-h-full lg:w-1/2">
         <source
@@ -19,15 +19,20 @@ export default function ServicesSectionTwo() {
 
       {/* Text content */}
       <div className="lg:w-1/2 xl:max-w-[605px]">
-        <h2 className="title-font mb-4 lg:mb-[30px]">
-          Your care is delivered through a membership.
-        </h2>
-
-        <p className="body-font">
-          Our membership allows for longer visits, more responsive access to your care team, and a
-          personalized plan that looks at your health as a whole. Instead of quick checklists,
-          appointments are designed for real conversations, follow-up, and continuity. Membership
-          plans start as low as $99 per month, depending on coverage and care needs.
+        <h2 className="title-font mb-4 lg:mb-[30px]">The Difference: Time & Training.</h2>
+        <p className="mb-6 body-font md:mb-8">
+          We believe you can’t treat the whole person in 15 minutes. That is why our first visits
+          are 60 minutes long. We give you the time to share your full health history, symptoms and
+          goals, and to finally be heard.
+        </p>
+        <p className="mb-6 body-font md:mb-8">
+          You deserve a team trained in women's health. You don’t need more referrals. You need a
+          team of primary care providers specially trained in women’s health, who connect the dots
+          between menopause, mental health, and healthy aging.
+        </p>
+        <p id="guide" className="body-font !font-bold italic !text-[#9A0180]">
+          That is why we built Herself Health Membership, care designed for women, by women,
+          centered on what women want.
         </p>
       </div>
     </section>

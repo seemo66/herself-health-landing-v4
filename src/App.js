@@ -6,7 +6,7 @@ import HeroSection from './components/HeroSection';
 import GuideSection from './components/GuideSection';
 import ServicesSectionOne from './components/ServicesSectionOne';
 import ServicesSectionTwo from './components/ServicesSectionTwo';
-import PatientRatingSection from './components/PatientRatingSection';
+// mport PatientRatingSection from './components/PatientRatingSection';
 // import InsuranceSection from './components/InsuranceSection';
 // import MembershipSection from './components/MembershipSection';
 // import FormGuideSectionDesktop from './components/FormGuideSectionDesktop';
@@ -21,7 +21,7 @@ import LocationSection from './components/LocationsSection';
 // import FaqSection from './components/FaqSection';
 // import Testimonials from './components/Testimonials';
 import InPracticeSection from './components/InPracticeSection';
-import AnnouncementsSection from './components/AnnouncementsSection';
+// import AnnouncementsSection from './components/AnnouncementsSection';
 
 function App() {
   // define the order of sections for easy management
@@ -29,10 +29,10 @@ function App() {
     HeroSection, // hero section with primary call-to-action
     ServicesSectionOne, // services offered by the company
     ServicesSectionTwo, // services offered by the company
-    PatientRatingSection, // patient ratings
+    // PatientRatingSection, // patient ratings
     GuideSection, // guide download section
     InPracticeSection,
-    AnnouncementsSection,
+    // AnnouncementsSection,
     // MembershipSection, // membership or subscription information
     // ComparisonSection, // comparison of services
     // OffersScection, // offers promotions

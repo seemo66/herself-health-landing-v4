@@ -105,7 +105,7 @@
   color: #9a0180;
 
   @media (min-width: 768px) {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 55px;
   }
 
@@ -121,6 +121,11 @@
   font-size: 24px;
   line-height: 30px;
   color: #6a0058;
+
+  @media (min-width: 1024px) {
+    font-size: 25pxpx;
+    line-height: 28px;
+  }
 
   @media (min-width: 1280px) {
     font-size: 27pxpx;
@@ -171,4 +176,14 @@
   line-height: 27px;
   text-align: center;
   color: #ffffff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgba(135, 85, 241, 0.01) inset !important;
+  box-shadow: 0 0 0 1000px rgba(135, 85, 241, 0.01) inset !important;
+  -webkit-text-fill-color: #1d2534 !important;
+  transition: background-color 9999s ease-in-out 0s;
 }

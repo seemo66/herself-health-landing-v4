@@ -19,16 +19,19 @@ export default function InPracticeSection() {
 
       {/* Text content */}
       <div className="lg:w-1/2 xl:max-w-[605px]">
-        <h2 className="title-font mb-4 lg:mb-[30px]">What this care looks like in practice</h2>
+        <h2 className="title-font mb-4 lg:mb-[30px]">Real Care, Designed by Women, for Women.</h2>
+
+        <p className="mb-6 body-font md:mb-8">
+          Many women in their 50s find themselves in a gap: their OBGYN focuses on reproductive
+          health, while standard primary care rushes them through 15-minute slots.
+        </p>
 
         {/* Service highlights with checkmarks */}
-        <ul className="list-font space-y-4 pl-0">
+        <ul className="pl-0 mb-6 space-y-4 list-font">
           {[
-            'Primary care designed around midlife health needs',
-            'Providers trained in women’s and midlife health',
-            'Longer visits that allow time to be heard and understood',
-            'Care that considers physical and emotional health together',
-            'Guidance tailored to your personal goals and long-term well-being',
+            '10,000+ Women Served across the Twin Cities',
+            '97% Patient Satisfaction rate.',
+            '4.9 Stars from 500+ Patients',
           ].map((item, idx) => (
             <li key={idx} className="flex items-center space-x-4">
               <img
@@ -41,6 +44,22 @@ export default function InPracticeSection() {
             </li>
           ))}
         </ul>
+
+        <div className="mb-5 flex gap-[19px]">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <img
+              key={index}
+              src={`${process.env.PUBLIC_URL}/images/star-icon-purple.png`}
+              alt="star icon"
+              className="h-auto w-[43px]"
+            />
+          ))}
+        </div>
+
+        <p className="text-[24px] font-medium italic leading-7 text-[#9A0180]">
+          "I finally felt listened to, supported, and understood. The team that knows me best is
+          always ready to help."
+        </p>
       </div>
     </section>
   );

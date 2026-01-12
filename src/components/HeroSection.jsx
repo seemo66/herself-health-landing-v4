@@ -24,23 +24,16 @@ export default function HeroSection() {
 
       {/* overlay text and button section */}
       <div className="relative z-10 px-[30px] py-[35px] pb-[48px] md:absolute md:inset-0 md:flex md:items-center md:justify-start md:p-12 lg:px-[100px]">
-        <div className="flex flex-col gap-4 md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[48%]">
+        <div className="flex flex-col gap-4 md:w-[55%] lg:w-[50%] xl:w-[50%] 2xl:w-[48%]">
           {/* main headline */}
-          <h1 className="title-font">Primary Care for Women in Midlife</h1>
+          <h1 className="title-font">A Primary Care Membership Designed For Women 50+</h1>
 
           {/* subheadline */}
           <h2 className="subtitle-font">
-            Care that gives you more time, easier access, and a connected plan so you don’t have to
-            figure it out alone
+            Is your healthcare keeping up with you? Standard clinics and routine OB-GYN visits often
+            miss the full picture of women’s health after 50. Hormones, sleep, mood, heart health,
+            bone health, prevention. It’s all connected.
           </h2>
-
-          {/* main descriptive paragraphs */}
-          <p className="body-font">
-            Midlife health can get complicated. Feeling rushed or dismissed makes it harder. Herself
-            Health offers primary care designed for this stage of life, so you have the time to talk
-            things through, responsive access when questions come up, and a care plan that connects
-            the dots across your health.
-          </p>
 
           {/* call-to-action button */}
           <button
@@ -50,7 +43,7 @@ export default function HeroSection() {
               document.getElementById('guide')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            See what membership includes
+            Get Information
           </button>
         </div>
       </div>

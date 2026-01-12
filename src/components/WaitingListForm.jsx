@@ -154,11 +154,11 @@ export default function WaitingListForm() {
         // clear any existing timer
         if (timerRef.current) clearTimeout(timerRef.current);
 
-        // reset form and hide success message after 5 seconds
+        // reset form and hide success message after 10 seconds
         timerRef.current = setTimeout(() => {
           setSubmitted(false);
           setFormData({ FirstName: '', LastName: '', Email: '', Phone: '' });
-        }, 5000);
+        }, 10000);
       } else {
         const errorData = await response.text();
         console.error('Form submission failed:', errorData);
@@ -181,28 +181,22 @@ export default function WaitingListForm() {
     <div className="relative flex items-center justify-center md:justify-start">
       {/* success message overlay */}
       <div
-        className={`absolute mb-3 font-reckless text-[24px] text-lg font-medium text-darkPink transition-opacity duration-700 ease-in-out xl:leading-tight ${
+        className={`absolute bottom-0 top-0 bg-[rgba(135,85,241,0.1)] px-4 pt-10 font-reckless text-[24px] text-lg font-medium text-darkPink transition-opacity duration-700 ease-in-out md:bg-white md:px-0 md:pt-0 xl:leading-tight ${
           submitted ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
-        <p className="pb-2 text-2xl text-center lg:text-left">Thank you!</p>
-        <p className="pb-5 text-2xl text-center lg:text-left">Your form has been submitted</p>
-        {/* <a
+        <p className="pb-4 text-2xl">Thank you for inquiring about herself health membership!</p>
+        <a
           href="/files/herself-health-guide.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline text-dusty-indego"
+          className="pb-2 text-2xl text-center underline text-dusty-indego lg:text-left"
         >
           [Click here to download your free guide to feeling your best]
         </a>
-        <p className="py-5">
-          We'll reach out soon to answer any questions and help you schedule your first visit.
+        <p className="py-5 pb-2 text-2xl">
+          We'll reach out to help answer any questions and go over plans available.
         </p>
-
-        <p className="text-xl">Prefer to call now?</p>
-        <a className="text-xl" href="tel:8882901209">
-          (888) 290-1209
-        </a> */}
       </div>
 
       {/* error message */}
@@ -217,7 +211,7 @@ export default function WaitingListForm() {
         onSubmit={handleSubmit}
         className={`w-full transition-opacity duration-700 ease-in-out ${
           submitted ? 'pointer-events-none opacity-0' : 'opacity-100'
-        } grid md:grid-cols-2 md:gap-x-[48px]`}
+        } grid bg-[#8755F1]/10 md:grid-cols-2 md:gap-x-[48px] md:bg-white`}
       >
         {fields.map(({ id, label, type, placeholder, autoComplete }) => (
           <div key={id}>
@@ -236,7 +230,7 @@ export default function WaitingListForm() {
               type={type}
               placeholder={placeholder}
               autoComplete={autoComplete}
-              className="mb-4 w-full rounded-[5px] border border-darkPink px-[10px] py-[8px] font-untitled text-[18px] font-normal placeholder:text-pink"
+              className="mb-4 w-full rounded-[5px] border border-darkPink bg-[rgba(135,85,241,0.01)] px-[10px] py-[8px] font-untitled text-[18px] font-normal shadow-none placeholder:text-pink focus:bg-[rgba(135,85,241,0.01)] focus:outline-none focus:ring-0"
               value={formData[id]}
               onChange={handleChange}
               required
@@ -248,14 +242,18 @@ export default function WaitingListForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className={`mb-2 mt-2 w-full rounded-[10px] p-[10px] text-[22px] transition-colors md:col-span-2 ${
+          className={`mb-4 mt-2 w-full rounded-[10px] p-[10px] text-[22px] transition-colors md:col-span-2 ${
             isLoading
               ? 'cursor-not-allowed bg-gray-400 text-gray-600'
               : 'bg-purple text-white hover:bg-purple/90'
           }`}
         >
-          {isLoading ? 'Submitting...' : 'Submit'}
+          {isLoading ? 'Submitting...' : 'Send me the guide'}
         </button>
+        <p className="md:col-span-2">
+          Plans start at $99/mo. <br className="block md:hidden" />
+          No commitment required.
+        </p>
       </form>
     </div>
   );
